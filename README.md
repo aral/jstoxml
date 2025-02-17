@@ -332,10 +332,10 @@ toXML(
                     link: 'google.com'
                 },
                 {
-                    lastBuildDate: () => new Date()
+                    lastBuildDate: () => new Date().toUTCString()
                 },
                 {
-                    pubDate: () => new Date()
+                    pubDate: () => new Date().toUTCString()
                 },
                 {
                     language: 'en'
@@ -345,7 +345,7 @@ toXML(
                         title: 'Item title',
                         link: 'Item link',
                         description: 'Item Description',
-                        pubDate: () => new Date()
+                        pubDate: () => new Date().toUTCString()
                     }
                 },
                 {
@@ -353,7 +353,7 @@ toXML(
                         title: 'Item2 title',
                         link: 'Item2 link',
                         description: 'Item2 Description',
-                        pubDate: () => new Date()
+                        pubDate: () => new Date().toUTCString()
                     }
                 }
             ]
@@ -372,20 +372,20 @@ Output:
     <title>RSS Example</title>
     <description>Description</description>
     <link>google.com</link>
-    <lastBuildDate>Sat Jul 30 2011 18:14:25 GMT+0900 (JST)</lastBuildDate>
-    <pubDate>Sat Jul 30 2011 18:14:25 GMT+0900 (JST)</pubDate>
+    <lastBuildDate>Sat, 30 Jul 2011 18:14:25 GMT</lastBuildDate>
+    <pubDate>Sat, 30 Jul 2011 18:14:25 GMT</pubDate>
     <language>en</language>
     <item>
       <title>Item title</title>
       <link>Item link</link>
       <description>Item Description</description>
-      <pubDate>Sat Jul 30 2011 18:33:47 GMT+0900 (JST)</pubDate>
+      <pubDate>Sat, 30 Jul 2011 18:33:47 GMT</pubDate>
     </item>
     <item>
       <title>Item2 title</title>
       <link>Item2 link</link>
       <description>Item2 Description</description>
-      <pubDate>Sat Jul 30 2011 18:33:47 GMT+0900 (JST)</pubDate>
+      <pubDate>Sat, 30 Jul 2011 18:33:47 GMT</pubDate>
     </item>
   </channel>
 </rss>
